@@ -1,0 +1,12 @@
+Community A
+Community B
+Community C
+Community X
+Community Y
+Community Z
+
+Community A to Community B at 15
+Community A to Community C at 3
+Community X to Community A at 90
+Community B to Community Z at 26
+Community C to Community Y at 42

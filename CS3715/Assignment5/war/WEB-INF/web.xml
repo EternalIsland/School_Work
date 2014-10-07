@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+    http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+    version="3.0">
+
+    <display-name>Demos</display-name>
+
+    <!-- handels static content -->
+    <servlet>
+        <servlet-name>default</servlet-name>
+        <servlet-class>org.eclipse.jetty.servlet.DefaultServlet</servlet-class>
+        <init-param>
+            <param-name>dirAllowed</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cacheControl</param-name>
+            <param-value>no-cache,no-store,must-revalidate</param-value>
+       </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>static/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- @snipit HttpRequestServlet -->
+    <servlet>
+        <description> Display http request </description>
+        <display-name>HttpRequestServlet</display-name>
+        <servlet-name>HttpRequestServlet</servlet-name>
+        <servlet-class>demo.HttpRequestServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HttpRequestServlet</servlet-name>
+        <url-pattern>requests/*</url-pattern>
+    </servlet-mapping>
+    <!-- @snipit-end  HttpRequestServlet -->
+
+    <!-- @snipit form.PatientFormServlet -->
+    <servlet>
+        <description> Patient Data </description>
+        <display-name>PatientFormServlet</display-name>
+        <servlet-name>PatientFormServlet</servlet-name>
+        <servlet-class>form.PatientFormServlet</servlet-class>
+        <init-param>
+            <param-name>patient-form</param-name>
+            <param-value>war/pat-form.html</param-value>
+        </init-param>
+        <init-param>
+            <param-name>patient-data</param-name>
+            <param-value>war/patient.data</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PatientFormServlet</servlet-name>
+        <url-pattern>patient-info/*</url-pattern>
+    </servlet-mapping>
+    <!-- @snipit-end form.PatientFormServlet -->
+
+    <!-- @snipit formJSON.PatientFormServlet -->
+    <servlet>
+        <description> Patient Data JSON</description>
+        <display-name>PatientFormServlet-json</display-name>
+        <servlet-name>PatientFormServlet-json</servlet-name>
+        <servlet-class>formJSON.PatientFormServlet</servlet-class>
+        <init-param>
+            <param-name>patient-form</param-name>
+            <param-value>war/pat-form-json.html</param-value>
+        </init-param>
+        <init-param>
+            <param-name>patient-data</param-name>
+            <param-value>war/patient.data</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PatientFormServlet-json</servlet-name>
+        <url-pattern>patient-info-json/*</url-pattern>
+    </servlet-mapping>
+    <!-- @snipit-end formJSON.PatientFormServlet -->
+
+    <mime-mapping>  
+        <extension>html</extension>  
+        <mime-type>text/html;charset=UTF-8</mime-type>  
+    </mime-mapping>
+
+    <mime-mapping>  
+        <extension>css</extension>  
+        <mime-type>text/css;charset=UTF-8</mime-type>  
+    </mime-mapping>
+
+    <mime-mapping>  
+        <extension>js</extension>  
+        <mime-type>application/javascript;charset=UTF-8</mime-type>  
+    </mime-mapping>
+
+    <welcome-file-list>
+        <welcome-file>static/index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1 { color: red; font-size:smaller;}
+</style>
+<body>
+<h1>Servlet Demos</h1>
+<ul>
+    <li><a href="requests"> Requests</a></li>
+    <li><a href="requests/foo"> Requests: /foo</a></li>
+    <li><a href="requests/foo/bar"> Requests: /foo/bar</a></li>
+    <li><a href="requests/foo/bar?a=3&amp;b=89"> Requests: /foo/bar?a=3&amp;b=89</a></li>
+    <li>
+        A simple form with GET:
+        <form action="requests/f1" method="get">
+            <input type="text" name="t1"/>
+        </form>
+    </li>
+    <li>
+        The same with POST:
+        <form action="requests/f1" method="post">
+            <input type="text" name="t1"/>
+        </form>
+    </li>
+    <li>
+        A form with two text fields and POST:
+        <form action="requests/f2" method="post">
+            <input type="text" name="t1"/>
+            <input type="text" name="t2"/>
+            <input type="submit"/>
+        </form>
+    </li>
+    <li>
+        A form with three text fields and GET:
+        <form action="requests/f3" method="get">
+            <input type="text" name="t1"/>
+            <input type="text" name="t2"/>
+            <input type="text" name="bar"/>
+            <input type="submit"/>
+        </form>
+    </li>
+    <li>
+        A form with two text fields and select and POST:
+        <form action="requests/f4" method="post">
+            <input type="text" name="t1"/>
+            <input type="text" name="t2"/>
+            <select name="month">
+              <option value="coldest">Jan</option>
+              <option value="cold">Feb</option>
+              <option value="damp">March</option>
+            </select>
+            <input type="submit"/>
+        </form>
+    </li>
+    <li><a href="static/p-form.html"> A separate form</a></li>
+    <li><a href="static/box-demo.html"> Box Model</a></li>
+    <li><a href="patient-info"> Patient Information Form</a></li>
+    <li><a href="patient-info-json"> Patient Information Form (JSON)</a></li>
+</ul>
+</body>
+</html>
