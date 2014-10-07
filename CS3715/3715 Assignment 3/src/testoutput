@@ -1,0 +1,31 @@
+matt@ubuntu:~/Documents/CS 3715/Assignment 3/src$ java MeetingServer 
+Server port: 57895
+
+matt@ubuntu:~/Documents/CS 3715/Assignment 3/src$ java MeetingClient 127.0.0.1 57895 COMP 3715
+connect Socket[addr=/127.0.0.1,port=57895,localport=55021]
+meeting1: Tuesday 1030 to 1145, EN-1052
+meeting2: Thursday 1030 to 1145, EN-1052
+closing Socket[addr=/127.0.0.1,port=57895,localport=55021]
+
+Feb 19, 2014 11:59:04 PM MeetingServer run
+INFO: accepted: Socket[addr=/127.0.0.1,port=55021,localport=57895]
+Feb 19, 2014 11:59:04 PM MeetingServer run
+INFO: closed: Socket[addr=/127.0.0.1,port=55021,localport=57895]
+
+matt@ubuntu:~/Documents/CS 3715/Assignment 3/src$ java MeetingClient 127.0.0.1 57895 ANTH 1031
+connect Socket[addr=/127.0.0.1,port=57895,localport=55022]
+meeting1: Tuesday 1900 to 2130, SN-3042
+meeting1: Monday 1300 to 1350, SN-2098
+meeting2: Tuesday 1300 to 1350, SN-2098
+meeting3: Thursday 1300 to 1350, SN-2098
+meeting1: Tuesday 1530 to 1645, SN-1019
+meeting2: Thursday 1530 to 1645, SN-1019
+meeting1: Monday 1530 to 1645, SN-3058
+meeting2: Wednesday 1530 to 1645, SN-3058
+closing Socket[addr=/127.0.0.1,port=57895,localport=55022]
+
+Feb 19, 2014 11:59:30 PM MeetingServer run
+INFO: accepted: Socket[addr=/127.0.0.1,port=55022,localport=57895]
+Feb 19, 2014 11:59:30 PM MeetingServer run
+INFO: closed: Socket[addr=/127.0.0.1,port=55022,localport=57895]
+

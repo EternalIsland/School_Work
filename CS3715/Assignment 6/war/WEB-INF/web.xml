@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+    http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+    version="3.0">
+
+    <display-name>Demos</display-name>
+
+    <!-- handels static content -->
+    <servlet>
+        <servlet-name>default</servlet-name>
+        <servlet-class>org.eclipse.jetty.servlet.DefaultServlet</servlet-class>
+        <init-param>
+            <param-name>dirAllowed</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cacheControl</param-name>
+            <param-value>no-cache,no-store,must-revalidate</param-value>
+       </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>static/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- @snipit form.StudentFormServlet -->
+    <servlet>
+        <description> Student Data </description>
+        <display-name>StudentFormServlet</display-name>
+        <servlet-name>StudentFormServlet</servlet-name>
+        <servlet-class>form.StudentFormServlet</servlet-class>
+        <init-param>
+            <param-name>student</param-name>
+            <param-value>war/student.html</param-value>
+        </init-param>
+        <init-param>
+            <param-name>student-data</param-name>
+            <param-value>war/student.data</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>StudentFormServlet</servlet-name>
+        <url-pattern>student/*</url-pattern>
+    </servlet-mapping>
+    <!-- @snipit-end form.StudentFormServlet -->
+
+
+    <!-- @snipit form.CourseFormServlet -->
+    <servlet>
+        <description> Course Data </description>
+        <display-name>CourseFormServlet</display-name>
+        <servlet-name>CourseFormServlet</servlet-name>
+        <servlet-class>form.CourseFormServlet</servlet-class>
+        <init-param>
+            <param-name>course</param-name>
+            <param-value>war/course.html</param-value>
+        </init-param>
+        <init-param>
+            <param-name>course-data</param-name>
+            <param-value>war/course.data</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CourseFormServlet</servlet-name>
+        <url-pattern>course/*</url-pattern>
+    </servlet-mapping>
+    <!-- @snipit-end form.CourseFormServlet -->
+
+
+    <mime-mapping>  
+        <extension>html</extension>  
+        <mime-type>text/html;charset=UTF-8</mime-type>  
+    </mime-mapping>
+
+    <mime-mapping>  
+        <extension>css</extension>  
+        <mime-type>text/css;charset=UTF-8</mime-type>  
+    </mime-mapping>
+
+    <mime-mapping>  
+        <extension>js</extension>  
+        <mime-type>application/javascript;charset=UTF-8</mime-type>  
+    </mime-mapping>
+
+    <welcome-file-list>
+        <welcome-file>static/index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

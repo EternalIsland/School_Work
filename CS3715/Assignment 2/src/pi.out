@@ -1,0 +1,51 @@
+4 threads
+Program start at: 1003216043375
+Thread starting at: 1003217653782
+Thread starting at: 1003217666614
+Thread starting at: 1003220139062
+Thread starting at: 1003221195282
+Approx. pi = 3.141449600000
+Thread finishing at: 1006499911432
+Total time for thread: 3282244818
+Approx. pi = 3.141768000000
+Thread finishing at: 1006507530080
+Total time for thread: 3287391018
+Approx. pi = 3.138704000000
+Thread finishing at: 1006534250041
+Total time for thread: 3313054759
+Approx. pi = 3.140632000000
+Thread finishing at: 1006544474108
+Total time for thread: 3326820326
+Comined pi value: 3
+Program ending at: 1006544745530
+Total time elapsed for program: 3328702155
+
+2 threads
+Program start at: 1030304569730
+Thread starting at: 1030307295777
+Thread starting at: 1030307295867
+Approx. pi = 3.141604800000
+Thread finishing at: 1034691794156
+Approx. pi = 3.141577600000
+Thread finishing at: 1034692114834
+Total time for thread: 4384818967
+Total time for thread: 4384498379
+Comined pi value: 3
+Program ending at: 1034692445473
+Total time elapsed for program: 4387875743
+
+1 thread
+Program start at: 1053915576480
+Thread starting at: 1053917015794
+Approx. pi = 3.141278000000
+Thread finishing at: 1062658129413
+Total time for thread: 8741113619
+Comined pi value: 3
+Program ending at: 1062658482963
+Total time elapsed for program: 8742906483
+
+
+Test data:
+My test computer has 4 cores.
+8742906483/4387875743 = 1.99; 2 threads is twice as fast as 1 thread
+4387875743/3328702155 = 1.32; 4 threads is 32% faster than 2 threads

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+<title>Course Information</title>
+</head>
+
+<body>
+	<form name="f1" action="course" method="post">
+		<p>
+			<input name="course-subject" type="text" placeholder="Course subject" />
+		</p>
+		<p>
+			<input name="course-number" type="text" placeholder="Course number" />
+		</p>
+
+		<input type="submit" value="Submit" />
+	</form>
+	<script type="text/javascript">
+        // disables sending form on return
+        function ignoreKeyPress( event ) {
+            if (event.keyCode == 13) {
+                 event.preventDefault();
+            }
+        }
+        var matches = document.querySelectorAll("input[type='text']");
+        for (var i = 0 ; i &lt; matches.length; i++) {
+            matches[i].addEventListener('keypress', ignoreKeyPress );
+        }
+    </script>
+</body>
+</html>

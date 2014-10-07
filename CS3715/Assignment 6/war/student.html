@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+
+<script type="text/javascript" src="static/js/local_ajax.js">
+</script>
+<script type="text/javascript" src="static/js/stu-form.js">
+</script>
+
+<title>Student Profile</title>
+</head>
+
+<body>
+	<form id="f1" method="get">
+		<p>
+			<input id="student-number" type="text" placeholder="Student number" />
+		</p>
+		<p>
+			<input id="student-firstname" type="text" placeholder="First name" /> 
+			<input id="student-lastname" type="text" placeholder="Last name" />
+		</p>
+		<p>
+			<input id="student-email" type="text" placeholder="Email address" /> 
+			<input id="student-mail" type="text" placeholder="Mailing address" />
+		</p>
+		<p>
+			<input id="submit" type="submit" value="Submit" />
+		</p>
+	</form>
+	<script type="text/javascript">
+        // disables sending form on return
+        function ignoreKeyPress( event ) {
+            if (event.keyCode == 13) {
+                 event.preventDefault();
+            }
+        }
+        var matches = document.querySelectorAll("input[type='text']");
+        for (var i = 0 ; i &lt; matches.length; i++) {
+            matches[i].addEventListener('keypress', ignoreKeyPress );
+        }
+    </script>
+</body>
+</html>
